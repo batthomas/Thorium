@@ -1,6 +1,7 @@
 package ch.herzog.thorium.module;
 
 import ch.herzog.thorium.module.movement.NoFallModule;
+import ch.herzog.thorium.module.movement.NoKnockbackModule;
 import ch.herzog.thorium.module.movement.SpiderModule;
 import ch.herzog.thorium.module.render.FullbrightModule;
 
@@ -20,6 +21,7 @@ public class ModuleManager {
         addModule(new NoFallModule());
         addModule(new SpiderModule());
         addModule(new FullbrightModule());
+        addModule(new NoKnockbackModule());
     }
 
     private void addModule(Module module) {
