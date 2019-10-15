@@ -6,7 +6,8 @@ public class ThoriumInitializer implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        System.out.println("Hello Thorium!");
+        ThoriumClient client = ThoriumClient.INSTANCE;
+        client.initialize();
     }
 
 }
