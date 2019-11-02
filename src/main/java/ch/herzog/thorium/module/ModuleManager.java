@@ -31,4 +31,8 @@ public class ModuleManager {
     public Module getModule(String name) {
         return modules.get(name.toLowerCase());
     }
+
+    public Map<String, Module> getModules() {
+        return modules;
+    }
 }

@@ -1,5 +1,7 @@
 package ch.herzog.thorium.command;
 
+import ch.herzog.thorium.command.commands.EnchantCommand;
+import ch.herzog.thorium.command.commands.SayCommand;
 import ch.herzog.thorium.command.commands.ToggleCommand;
 import ch.herzog.thorium.command.exception.CommandException;
 import ch.herzog.thorium.command.exception.CommandNotFoundException;
@@ -22,8 +24,13 @@ public class CommandManager implements ChatOutputListener {
     }
 
     private void initCommands() {
-        Command cmd = new ToggleCommand();
-        commands.put(cmd.getAlias(), cmd);
+        registerCommand(new ToggleCommand());
+        registerCommand(new EnchantCommand());
+        registerCommand(new SayCommand());
+    }
+
+    private void registerCommand(Command command) {
+        commands.put(command.getAlias(), command);
     }
 
     @Override

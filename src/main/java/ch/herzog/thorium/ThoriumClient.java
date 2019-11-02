@@ -2,6 +2,7 @@ package ch.herzog.thorium;
 
 import ch.herzog.thorium.command.CommandManager;
 import ch.herzog.thorium.event.EventManager;
+import ch.herzog.thorium.gui.hud.InGameHud;
 import ch.herzog.thorium.module.ModuleManager;
 import net.minecraft.client.MinecraftClient;
 
@@ -18,6 +19,9 @@ public enum ThoriumClient {
 
         commandManager = new CommandManager();
         eventManager.add(commandManager);
+
+        InGameHud hud = new InGameHud();
+        hud.setActive(true);
     }
 
     public EventManager getEventManager() {
